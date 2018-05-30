@@ -8,11 +8,11 @@ describe "#display_board in 'lib/display_board.rb" do
       output = capture_puts{ display_board(board) }
       rows = output.split("\n")
 
-      expect(rows[0]).to eq("#{"X"} | #{"O"} |   ")
+      expect(rows[0]).to eq("#{board[0]} | #{board[1]} | #{board[2]}  ")
       expect(rows[1]).to eq("-----------")
-      expect(rows[2]).to eq("   | #{"X"} |   ")
+      expect(rows[2]).to eq(" #{board[3]}  | #{board[4]} | #{board[5]}  ")
       expect(rows[3]).to eq("-----------")
-      expect(rows[4]).to eq(" #{"X"} | #{"O"}|   ")
+      expect(rows[4]).to eq(" #{board[6]} | #{board[7]} |  #{board[8]} ")
     end
 
     it 'prints a board with an X in the center position' do
